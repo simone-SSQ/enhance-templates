@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mediation level 1 training | Queensland Government</title>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@qld-gov-au/qgds-bootstrap5@2.1.20/dist/assets/css/qld.bootstrap.css">
+  <style>
+    :root {
+      --qld-coa-logo-svg: url("https://cdn.jsdelivr.net/npm/@qld-gov-au/qgds-bootstrap5@2.1.20/dist/assets/img/coa-delivering-for-qld.svg");
+    }
+
+    /* Side nav panel title — QGDS uses .nav-title without full h2 display scale */
+    .qld-side-navigation .nav-wrapper > .nav-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      color: var(--qld-headings-color, var(--bs-heading-color, inherit));
+    }
+
+    /* Page meta strip: divider when stacked only (matches qld.gov.au rhythm) */
+    .qld-page-meta-band {
+      border-top: 1px solid var(--qld-color-default-color-light-border-alt, rgba(22, 22, 22, 0.14));
+    }
+
+    @media (min-width: 992px) {
+      .qld-page-meta-band {
+        border-top: none;
+      }
+    }
+
+    /* Website feedback column: full width below lg; fixed width on lg+ */
+    @media (max-width: 991.98px) {
+      .qld-footer .optional-column-2.border-column {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .qld-footer #btn-footer-feedback {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .qld-footer .optional-column-2 {
+        flex: 0 0 336px;
+        width: 336px;
+        max-width: 336px;
+      }
+    }
+
+    ol.breadcrumb {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    ol.breadcrumb .breadcrumb-item a {
+      padding-right: 4px;
+    }
+
+    ol.breadcrumb .breadcrumb-item:not(:first-child) a {
+      margin-left: 4px;
+      padding-bottom: unset;
+    }
+
+    /* Official QGDS CoA + wordmark asset (same 2.1.20 bundle as qld.bootstrap.css).
+       Main row (desktop): exact brand blue R0 G94 B184 via mask.
+       Pre-header: monochrome img inverts to white below lg. */
+    .qld-coa-logo-img {
+      display: block;
+      width: auto;
+    }
+
+    .qld-coa-logo-img--pre {
+      height: 40px;
+    }
+
+    .qld-coa-logo-img--main {
+      width: 331px;
+      max-width: 100%;
+      height: 56px;
+      flex-shrink: 0;
+      -webkit-mask-image: var(--qld-coa-logo-svg);
+      mask-image: var(--qld-coa-logo-svg);
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: left center;
+      mask-position: left center;
+    }
+
+    @media (min-width: 992px) {
+      .qld-coa-logo-img--main {
+        background-color: rgb(0, 94, 184);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .qld-coa-logo-img--main {
+        background-color: #131212;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .qld-header-pre-header.dark .qld-coa-logo-img--pre {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    @media (min-width: 992px) {
+      #main-content {
+        max-width: 800px;
+      }
+    }
+
+    /* Content band vertical rhythm closer to Squiz/QGDS law templates */
+    #main-content hr {
+      margin-top: 32px;
+      margin-bottom: 64px;
+    }
+
+    /* Override QGDS tool-page h1 top spacing (default ~64px) */
+    #main-content h1.mb-24 {
+      margin-top: 24px;
+    }
+
+    #main-content #how-to-enrol h3.h5 {
+      font-size: 24px;
+    }
+
+    #main-content #how-to-enrol h4.h5 {
+      font-size: 20px;
+    }
+
+    #main-content #what-you-will-learn h3.h5 {
+      font-size: 20px;
+    }
+
+    #main-content #who-can-enrol p.fw-bold {
+      color: rgba(0, 0, 83, 1);
+    }
+
+    /* Enrol CTAs — full-width on narrow viewports (~phone) */
+    @media (max-width: 699.98px) {
+      #main-content h2#in-short + p + a.btn.btn-primary,
+      #how-to-enrol p.mb-32.mb-lg-40 > a.btn.btn-primary {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+      }
+    }
+
+    #main-content .qld-inpage-nav .nav-title {
+      margin-bottom: 12px;
+    }
+
+    /* Typography below lg — complements QGDS / Bootstrap scaling */
+    @media (max-width: 991.98px) {
+
+      #main-content h1 {
+        font-size: 1.75rem;
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+      }
+
+      #main-content section>h2,
+      #main-content .qld-inpage-nav>.nav-title {
+        font-size: 1.25rem;
+        line-height: 1.35;
+      }
+
+      #main-content .lead {
+        font-size: 1.0625rem;
+        line-height: 1.5;
+      }
+
+      #main-content p,
+      #main-content li,
+      #main-content .accordion-body {
+        font-size: 0.9375rem;
+        line-height: 1.55;
+      }
+
+      #main-content .qld-inpage-nav .nav-link {
+        font-size: 0.9375rem;
+        line-height: 1.45;
+      }
+
+      #main-content .accordion-button {
+        font-size: 0.9375rem;
+        line-height: 1.35;
+      }
+
+      .qld-side-navigation .accordion-button.d-lg-none {
+        font-size: 0.9375rem;
+      }
+
+      .qld-side-navigation .nav-title {
+        font-size: 1.125rem;
+        line-height: 1.35;
+      }
+
+      .qld-side-navigation .nav-link {
+        font-size: 0.875rem;
+        line-height: 1.45;
+      }
+
+      .tag-list.tag-default .tag-item {
+        font-size: 0.8125rem;
+      }
+
+      .d-lg-none.mb-24>a.link-secondary {
+        font-size: 0.9375rem;
+        line-height: 1.45;
+      }
+
+      .qld-page-meta-band p,
+      .qld-page-meta-band a,
+      .qld-page-meta-band .qld-content-dates {
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+
+      .qld-footer .footer-site-name {
+        font-size: 1.25rem;
+        line-height: 1.3;
+      }
+
+      .qld-footer .footer-heading {
+        font-size: 1rem;
+      }
+
+      .qld-footer p,
+      .qld-footer .footer-link-list .nav-link,
+      .qld-footer .footer-contact-item,
+      .qld-footer .copyright {
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+
+      .qld-footer .btn {
+        font-size: 0.875rem;
+      }
+
+      #main-nav .navbar-brand {
+        font-size: 1rem;
+      }
+
+      #main-nav .nav-link {
+        font-size: 0.9375rem;
+      }
+
+      .qld-header-pre-header .qld-header-link {
+        font-size: 0.8125rem;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+
+      #main-content h1 {
+        font-size: 1.625rem;
+      }
+
+      #main-content section>h2,
+      #main-content .qld-inpage-nav>.nav-title {
+        font-size: 1.1875rem;
+      }
+
+      #main-content .lead {
+        font-size: 1rem;
+      }
+
+      #main-content p,
+      #main-content li,
+      #main-content .accordion-body {
+        font-size: 0.875rem;
+        line-height: 1.55;
+      }
+
+      .qld-side-navigation .nav-link {
+        font-size: 0.8125rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+
+      #main-content h1 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+      }
+
+      #main-content section>h2,
+      #main-content .qld-inpage-nav>.nav-title {
+        font-size: 1.125rem;
+      }
+
+      #main-content .lead {
+        font-size: 0.9375rem;
+      }
+
+      #main-content p,
+      #main-content li,
+      #main-content .accordion-body {
+        font-size: 0.8125rem;
+        line-height: 1.55;
+      }
+
+      #main-content .accordion-button,
+      .qld-side-navigation .accordion-button.d-lg-none {
+        font-size: 0.875rem;
+      }
+
+      .qld-side-navigation .nav-title {
+        font-size: 1.0625rem;
+      }
+
+      .qld-side-navigation .nav-link {
+        font-size: 0.8125rem;
+      }
+
+      .d-lg-none.mb-24>a.link-secondary {
+        font-size: 0.875rem;
+      }
+
+      .tag-list.tag-default .tag-item {
+        font-size: 0.75rem;
+      }
+
+      .qld-page-meta-band p,
+      .qld-page-meta-band a,
+      .qld-page-meta-band .qld-content-dates {
+        font-size: 0.8125rem;
+      }
+
+      .qld-footer .footer-site-name {
+        font-size: 1.125rem;
+      }
+
+      .qld-footer .footer-heading {
+        font-size: 0.9375rem;
+      }
+
+      .qld-footer p,
+      .qld-footer .footer-link-list .nav-link,
+      .qld-footer .footer-contact-item,
+      .qld-footer .copyright {
+        font-size: 0.8125rem;
+      }
+
+      .qld-footer .btn {
+        font-size: 0.8125rem;
+      }
+
+      #main-nav .navbar-brand {
+        font-size: 0.9375rem;
+      }
+
+      #main-nav .nav-link {
+        font-size: 0.875rem;
+      }
+
+      .qld-header-pre-header .qld-header-link {
+        font-size: 0.75rem;
+      }
+    }
+
+    .help-centre-band .link-column {
+      background-color: transparent;
+    }
+
+    .help-centre-band .link-column li.nav-item {
+      border-bottom-color: rgba(190, 223, 255, 1);
+    }
+
+    @media (max-width: 699px) {
+      .help-centre-band .qld-cta-link {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="visually-hidden-focusable position-absolute top-0 start-0 m-16 z-3" href="#main-content">Skip to main
+    content</a>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER — qld.gov.au/transport/licensing
+       Pre-header (dark strip)  +  main brand row
+       ═══════════════════════════════════════════ -->
+  <header class="qld-header" role="banner">
+
+    <!-- Pre-header: dark utility strip -->
+    <div class="qld-header-pre-header dark">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+
+          <!-- Left: "qld.gov.au" text (desktop) / CoA logo (mobile) -->
+          <a class="qld-header-link align-self-center" href="https://www.qld.gov.au"
+            aria-label="Queensland Government">
+            <!-- Text only on desktop – QGDS CSS hides logo at lg+ via .qld-header-logo rule -->
+            <span class="d-none d-lg-inline">qld.gov.au</span>
+            <!-- Logo only on mobile – hidden at lg+ by both QGDS CSS and Bootstrap d-lg-none -->
+            <img src="https://cdn.jsdelivr.net/npm/@qld-gov-au/qgds-bootstrap5@2.1.20/dist/assets/img/coa-delivering-for-qld.svg"
+              alt="" width="331" height="56"
+              class="qld-header-logo is-delivering-for-qld qld-coa-logo-img qld-coa-logo-img--pre"
+              aria-hidden="true">
+          </a>
+
+          <!-- Centre/Right: utility links – desktop only -->
+          <div class="d-none d-lg-flex align-items-baseline">
+            <a class="qld-header-link ms-16" href="https://www.qld.gov.au/services">Find services</a>
+            <a class="qld-header-link ms-16" href="https://www.business.qld.gov.au/">Business Queensland</a>
+            <a class="qld-header-link ms-16" href="https://www.forgov.qld.gov.au/">Government employees</a>
+            <a class="qld-header-link ms-16" href="https://www.qld.gov.au/contact-us">Contact us</a>
+          </div>
+
+          <!-- Mobile-only: Search + Menu icon buttons
+               QGDS CSS hides these at lg+ with display:none -->
+          <div class="qld-header-mobile-controls">
+            <button id="qld-header-toggle-search-button" type="button"
+              class="qld-header-mobile-button is-search-toggle is-closed"
+              aria-controls="qld-header-search" aria-expanded="false"
+              aria-label="Open search">Search</button>
+            <button id="burgerBtn" type="button"
+              class="qld-header-mobile-button is-menu-toggle"
+              data-bs-toggle="collapse" data-bs-target="#main-nav"
+              aria-controls="main-nav" aria-expanded="false"
+              aria-label="Open menu">Menu</button>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /pre-header -->
+
+    <!-- Main header: CoA logo (desktop) + Search bar -->
+    <div class="qld-header-main default">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Brand / logo column
+               QGDS CSS:
+               • .qld-header-brand-image  → display:none by default, display:block at lg+
+               • .qld-header-brand:not(:has(.qld-header-secondary-content)) → hidden on mobile
+               So on mobile the main header area is visually minimal (just the bottom border)
+               and the CoA logo in the pre-header carries the brand. -->
+          <div class="col">
+            <div class="qld-header-brand">
+              <a class="qld-header-link d-lg-inline-flex align-middle" href="https://www.qld.gov.au"
+                aria-label="Delivering for Queensland — Queensland Government">
+                <div class="qld-header-brand-image align-self-center">
+                  <span class="qld-header-logo is-delivering-for-qld qld-coa-logo-img qld-coa-logo-img--main"
+                    role="img" aria-hidden="true"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Search column
+               QGDS CSS: is-closed hides on mobile; at lg+ display:block always overrides is-closed -->
+          <div class="col-lg-4">
+            <div id="qld-header-search" class="qld-header-site-search is-closed">
+              <form class="site-search" role="search" action="https://www.qld.gov.au/search" method="get">
+                <div class="qld-search-input">
+                  <input id="site-search-query" name="query" class="form-control" type="search"
+                    autocomplete="off" aria-label="Search" placeholder="Search">
+                  <button class="btn btn-primary" type="submit" aria-label="Search">
+                    <span class="btn-icon" aria-hidden="true"></span>
+                    <span class="btn-label">Search</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /qld-header-main -->
+
+  </header>
+
+  <!-- ═══════════════════════════════════
+       PRIMARY NAVIGATION (QGDS Navbar)
+       Desktop: horizontal bar
+       Mobile: full-screen slide-out
+       ═══════════════════════════════════ -->
+  <nav id="main-nav" class="navbar navbar-expand-lg" aria-label="Website navigation" role="navigation">
+    <div id="navbarNav" class="container">
+
+      <!-- Mobile nav header (title + close button) -->
+      <div class="nav-header">
+        <span class="navbar-brand">Menu</span>
+        <button id="burgerCloseBtn" type="button" class="navbar-btn"
+          data-bs-toggle="collapse" data-bs-target="#main-nav"
+          aria-controls="main-nav" aria-expanded="false" aria-label="Close">Close</button>
+      </div>
+
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+
+          <!-- Home (icon only on desktop, labelled on mobile) -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.qld.gov.au/">
+              <span class="qld-icon qld-icon-md qld-icon-home" aria-hidden="true"></span>
+              <span class="visually-hidden-lg">Home</span>
+            </a>
+          </li>
+
+          <!-- WoG mega menu -->
+          <li class="nav-item dropdown" data-is-expanded-on-mobile="true">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+            <button class="nav-link dropdown-toggle" type="button"
+              data-bs-toggle="dropdown" data-bs-auto-close="false"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="visually-hidden">Expand</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Aboriginal and Torres Strait Islander peoples</a></li>
+              <li><a class="dropdown-item" href="#">Community support</a></li>
+              <li><a class="dropdown-item" href="#">Education</a></li>
+              <li><a class="dropdown-item" href="#">Emergency services and safety</a></li>
+              <li><a class="dropdown-item" href="#">Environment, land and water</a></li>
+              <li><a class="dropdown-item" href="#">Family, relationships, births and deaths</a></li>
+              <li><a class="dropdown-item" href="#">Health</a></li>
+              <li><a class="dropdown-item" href="#">Housing</a></li>
+              <li><a class="dropdown-item" href="#">Jobs and work</a></li>
+              <li><a class="dropdown-item" href="#">People with disability</a></li>
+              <li><a class="dropdown-item" href="#">Queensland's government</a></li>
+              <li><a class="dropdown-item" href="#">Recreation, sport and arts</a></li>
+              <li><a class="dropdown-item" href="#">Transport</a></li>
+              <li><a class="dropdown-item" href="#">Your rights, crime and the law</a></li>
+              <li><a class="dropdown-item" href="#">Youth</a></li>
+            </ul>
+          </li>
+
+          <!-- Utility links visible only on mobile
+               (shown in pre-header on desktop) -->
+          <li class="nav-item mobile-only">
+            <a class="nav-link" href="#">Find services</a>
+          </li>
+          <li class="nav-item mobile-only">
+            <a class="nav-link" href="#">Business Queensland</a>
+          </li>
+          <li class="nav-item mobile-only">
+            <a class="nav-link" href="#">Government employees</a>
+          </li>
+          <li class="nav-item mobile-only">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+    <div id="overlay"></div>
+  </nav>
+
+  <div class="container mt-40 mt-lg-32 pb-40 pb-lg-48">
+
+    <!-- Desktop breadcrumbs — matches qld.gov.au training certificate IA -->
+    <nav class="d-none d-lg-block" aria-label="breadcrumb">
+      <ol class="breadcrumb mb-24">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#>Your rights, crime and the law</a></li>
+        <li class="breadcrumb-item"><a href="#">Legal,
+            mediation and justice of the peace</a></li>
+        <li class="breadcrumb-item"><a
+            href="#">Training
+            in dispute resolution</a></li>
+        <li class="breadcrumb-item"><a
+            href="#">Mediation
+            skills training</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Mediation level 1 training</li>
+      </ol>
+    </nav>
+
+    <!-- Mobile section wayfinding -->
+    <div class="d-lg-none mb-24">
+      <a class="link-secondary text-decoration-none d-inline-flex align-items-center gap-8"
+        href="#">
+        <span class="qld-icon qld-icon-sm qld-icon-chevron-left" aria-hidden="true"></span>
+        Mediation skills training
+      </a>
+    </div>
+
+    <div class="row gx-16 gx-lg-32 gy-32 gy-lg-0 align-items-lg-start mx-0">
+      <!-- Main column -->
+      <div class="col-12 col-lg-8 ms-lg-0 px-0">
+        <main id="main-content">
+          <ul class="tag-list tag-default mb-24 justify-content-start ps-0">
+            <li class="tag-item">Training</li>
+          </ul>
+          <h1 class="mb-24">Mediation level 1 training</h1>
+
+          <p class="lead mb-32 mb-lg-40">Learn how to facilitate a mediation process in our Mediation Level 1 training.</p>
+          <hr aria-hidden="true">
+
+          <nav class="qld-inpage-nav mb-40" aria-label="In page navigation">
+            <h2 class="nav-title nav-link">On this page</h2>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#in-short">In short</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#course-details">Course details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#who-can-enrol">Who can enrol</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#how-to-enrol">How to enrol</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#what-you-will-learn">What you will learn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#how-you-will-be-assessed">How you will be assessed</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#awards-you-get">Awards you get</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="mb-40 p-24 rounded" style="background-color: rgba(230, 246, 255, 1);">
+            <h2 class="mb-16" id="in-short">In short</h2>
+            <p class="mb-24">Learn essential communication, tactical and cultural sensitivity skills to understand conflict resolution at a deeper level.
+              Equip yourself with powerful national standard-negotiation frameworks to deliver win-win outcomes for any client.</p>
+            <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+              <span class="btn-icon qld-icon qld-icon-md qld-icon-external-link" aria-hidden="true"></span>
+              <span class="btn-label">Enrol now</span>
+            </a>
+          </div>
+
+          <section id="course-details" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">Course details</h2>
+            <div class="table-responsive qld-table">
+              <table class="table">
+                <colgroup>
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="colgroup" colspan="2" class="caption">
+                      Important course information
+                    </th>
+                  </tr>
+                </thead>
+      
+                <tbody>
+                  <tr>
+                    <th scope="row">Delivery</th>
+                    <td>
+                      <p>This course is delivered in a hybrid structure consisting of</p>
+                      <ul>
+                        <li>an online module—8 hours (equivalent to 1 day)</li>
+                        <li>
+                          in-person training sessions—38 hours (equivalent to 5 days)
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Start dates</th>
+                    <td>
+                      <p>8-12 June 2026</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Location</th>
+                    <td>
+                      <p>In-person training sessions are held at:<br />
+                        <a
+                          href="#"
+                          >South Queensland Dispute Resolution Centre</a><br />
+                        Level 26, 400 George Street,<br />
+                        Brisbane<br />
+                        Qld 4000
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cost</th>
+                    <td>
+                      <p>$2,589.00</p>
+                      <p>
+                        $1,906.00 concession
+                      </p>
+                      <p>$494.90 for optional assessment</p>
+                      <p>See <a href="#">concession eligibility</a></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="who-can-enrol" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">Who can enrol</h2>
+            <div class="mb-40 p-16" style="background-color: rgba(242, 250, 244, 1);">
+                <div class="d-flex align-items-start">
+                  <div class="w-100">
+                  <div class="flex-grow-1 min-w-0 w-100 d-flex justify-content-start align-items-start gap-2">
+                    <span class="qld-icon qld-icon-md qld-icon-alert-success text-success flex-shrink-0 d-flex flex-wrap" aria-hidden="true"></span>
+                    <p class="fw-bold mb-0">You can enrol in Mediation level 1 training if:</p>
+                  </div>
+                    <ul class="mb-0 ps-24 pt-16">
+                      <li>you have a general interest in conflict resolution.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          <section id="how-to-enrol" class="mt-40 mt-lg-48">
+            <h2 class="mb-24">How to enrol</h2>
+
+            <h3 class="h5 mb-8">Step 1: Complete the application form</h3>
+            <h4 class="h5 mb-8">Online</h4>
+            <p class="mb-24">Complete the form.</p>
+            <p class="mb-32 mb-lg-40">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                <span class="btn-icon qld-icon qld-icon-md qld-icon-external-link" aria-hidden="true"></span>
+                <span class="btn-label">Enrol now</span>
+              </a>
+            </p>
+
+            <h3 class="h5 mb-8">Step 2: Pay the fee</h3>
+            <p class="mb-16">Payment via credit card is required to secure your place.
+              <p>See <a href="#">payment options</a> or <a href="#">concession eligibility.</a></p>
+              <p>See <a href="#">terms and conditions.</a></p>
+          </section>
+
+          <section id="what-you-will-learn" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">What you will learn</h2>
+            <p class="mb-16">The course covers professional knowledge, skills and ethical principles that accredited mediators are expected to use.</p>
+            <h3 class="h5 mb-8">Topics</h3>
+            <ul class="mb-24 ps-24">
+              <li>Principles/philosophy of mediation</li>
+              <li>Understanding conflict</li>
+              <li>Facilitative model of mediation</li>
+              <li>Intake process</li> 
+              <li>Communication skills</li>
+              <li>Negotiation frameworks</li>
+              <li>Cultural considerations, inclusivity accessibility, and diversity</li>
+              <li>Managing difficult behaviours and responses</li>
+              <li>Trauma-informed practice and bias</li>
+              <li>Importance of continuing professional development</li>
+              <li>Negotiation skills</li>
+            </ul>
+          </section>
+
+          <section id="how-you-will-be-assessed" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">How you will be assessed</h2>
+            <p class="mb-16">Closed-book written exam person (1 hour)</p>
+            <p>The assessment is optional and only required if you want become a nationally accredited mediator.</p>
+          </section>
+
+          <section id="awards-you-get" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">Awards you get</h2>
+            <p class="mb-16">Certificate of training award.</p>
+            <p>Nationally recognised by the <a href="#">Australian mediator and dispute resolution accreditation standards</a> (AMDRAS).</p>
+          </section>
+
+          <section id="contact" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">Contact</h2>
+            <p class="mb-0">Contact the Dispute Resolution Branch on <a
+                href="tel:(07) 3738 7015">(07) 3738 7015</a> or email <a
+                href="#">mediation.training@justice.qld.gov.au</a> </p>
+          </section>
+
+         <section id="from-help-centre" class="mt-40 mt-lg-48"></section>
+          <div class="help-centre-band mb-40 p-24 rounded" style="background-color: rgba(230, 246, 255, 1);">
+            <h3 class="mb-16" id="from-help-centre">From the help centre</h3>
+            <p class="mb-24">Find answers to frequently asked questions about services, including:</p>
+            <section class="link-column mb-24" aria-label="Help centre">
+              <ul class="nav col-1">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Mediation and dispute resolution FAQs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Training fees, concessions and payments</a>
+                </li>
+                <li class="nav-item all-link">
+                  <a class="qld-cta-link view-all" href="#" target="_blank" rel="noopener noreferrer">
+                    Find more in the Help centre
+                    <span class="icon" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+        </main>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-12 col-lg-3 ps-lg-0 pe-lg-0 order-last order-lg-0 mt-40 mt-lg-0 ms-lg-auto">
+        <nav class="qld-side-navigation" aria-label="Side Navigation">
+<button class="accordion-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sideNavCollapse" aria-expanded="false" aria-controls="sideNavCollapse">
+In this section
+</button>
+<div class="nav-wrapper collapse d-lg-block" id="sideNavCollapse">
+
+<h2 class="nav-title">
+<a class="nav-link" href="#">Mediation skills training</a>
+</h2>
+
+<ul class="nav" aria-label="section navigation">
+<li class="nav-item active">
+<a href="#" class="nav-link">Mediation level 1 training</a>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link">Mediation level 2 training</a>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link">Mediation mentoring sessions</a>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link">Register for dispute resolution training</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+
+      <!-- Page meta: aligns under main column on lg; follows section nav when stacked -->
+      <div class="col-12 qld-page-meta-band mt-16 mt-lg-48 pt-32 mb-40 mb-lg-48">
+        <p class="mb-8"><span class="fw-semibold">This page is managed by:</span>
+          <a href="#">Dispute Resolution Branch</a>
+        </p>
+        <dl class="qld-content-dates my-0">
+          <dt class="my-0">Last updated:</dt>
+          <dd class="my-0">12 December 2023</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+<!-- QGDS Footer Component -->
+
+<footer class="qld-footer dark" role="contentinfo">
+  <!-- Footer content container -->
+  <div class="container">
+    <div class="row">
+      <div class="col title">
+        <h2 class="footer-site-name">Queensland Government</h2>
+      </div>
+    </div>
+    <div class="row">
+      
+      <!-- Contact us Column -->
+      <div class="col-12 col-lg-3 py-24 py-lg-0 footer-contact ">
+
+        <!-- Inner Grid to manage layout of contact us content -->
+        <div class="row ">
+
+          <div class="col col-lg-12">
+
+            <h3 class="footer-heading">
+            Contact us
+            </h3>
+
+            <div>
+            <p>Get in touch for enquiries, feedback, complaints and compliments.</p>
+            </div>
+              
+          </div><!-- Inner grid col-12  -->
+
+          <div class="col col-lg-12 contact-btn order-lg-last d-flex d-lg-block mt-lg-32 ">
+            <a href="#" class="btn btn-outline-secondary">
+              Contact us
+            </a>
+          </div><!-- Inner grid col-12  -->  
+        
+       
+          <div class="col-12">
+              <div class="footer-contact-item footer-contact-0">
+                <span class="qld-icon qld-icon-phone" aria-hidden="true"></span> <span><strong>Phone: </strong><a href="tel:137468" class="d-inline" data-analytics-link-group="qg-contact-phone">13 QGOV (13 74 68)</a></span>
+              </div>
+              <div class="footer-contact-item footer-contact-1">
+                <span class="qld-icon qld-icon-facebook" aria-hidden="true"></span> <a href="#">/QueenslandGovernment</a>
+              </div>
+              <div class="footer-contact-item footer-contact-2">
+                <span class="qld-icon qld-icon-x" aria-hidden="true"></span> <a href="#">@QldGov</a>
+              </div>
+
+          </div>
+        </div>
+
+      </div><!-- Contact us Column -->
+
+
+
+
+      <!-- WoG links -->
+      <div class="col-12 col-lg-2 border-column"
+        aria-label="footer-navigation">
+        
+        <div class="footer-column pe-lg-16">
+
+
+        
+          <ul class="nav footer-link-list flex-column pt-lg-2">
+            <li><a class="nav-link" href="#" >Help</a></li>
+            <li><a class="nav-link" href="#" >Copyright</a></li>
+            <li><a class="nav-link" href="#" >Disclaimer</a></li>
+            <li><a class="nav-link" href="#" >Privacy</a></li>
+            <li><a class="nav-link" href="#" >Right to information</a></li>
+            <li><a class="nav-link" href="#" >Accessibility</a></li>
+            <li><a class="nav-link" href="#" >Jobs in Queensland Government</a></li>
+            <li><a class="nav-link" href="#" >Other languages</a></li>
+          </ul>
+
+        
+        </div>
+      </div>
+
+
+      <!-- Optional Column 2 — feedbackForm partial needs a .row around col-* (see QGDS feedbackForm.hbs) -->
+      <div class="col-12 col-lg-2 optional-column-2 border-column" aria-label="Website feedback">
+        <div class="footer-column pe-lg-16">
+          <h3 class="footer-heading">Website feedback</h3>
+          <div class="footer-content">
+            <div class="row">
+              <div class="col-12">
+                <p>Help us improve the content on our website or tell us what is working well.</p>
+              </div>
+              <div class="col-12">
+                <div id="qg-feedback-toggle" class="qg-footer-feedback-wrap">
+                  <a id="btn-footer-feedback" class="btn btn-global-secondary qg-feedback-toggle collapsed"
+                    data-bs-toggle="collapse" href="#qg-footer-feedback" role="button" aria-expanded="false"
+                    aria-controls="qg-footer-feedback" data-analytics-link-group="qg-feedback">Leave your feedback</a>
+                  <div id="qg-footer-feedback" class="qg-footer-feedback__v2 collapse">
+                    <div id="feedbackFormIO" data-formio data-formio-project-name="oldkihhcwbdtwye"
+                      data-formio-form-name="footerfeedbackcontactus"
+                      data-formio-env-url="api.forms.platforms.qld.gov.au"
+                      data-formio-createForm-options="formioCreateFormOptions"
+                      data-formio-createForm-controller="formioCreateFormController">
+                      <div class="qg-spinner" role="status">
+                        <div class="spinner-border"></div>
+                        <div class="qg-spinner-label">Loading...</div>
+                      </div>
+                    </div>
+                    <div class="qg-footer-feedback-footer">
+                      <a class="qg-footer-feedback__close" data-bs-toggle="collapse" href="#qg-footer-feedback"
+                        role="button" aria-label="Close Feedback Form" aria-expanded="true"
+                        aria-controls="qg-footer-feedback">Close</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Acknowledgement of Country -->
+      <div class="col crest">
+
+        <div class="footer-column">
+
+        <div class="footer-content">
+          <div class="footer-acknowledgements">
+            
+              <h3 class="footer-heading">Cultural acknowledgement</h3>
+              
+              <p>We pay our respects to the Aboriginal and Torres Strait Islander ancestors of this land, their spirits and their legacy. The foundations laid by these ancestors—our First Nations peoples—give strength, inspiration and courage to current and future generations towards creating a better Queensland.</p>
+              
+            
+          </div>
+
+          
+          
+
+          <p class="copyright">
+            &copy; The State of Queensland
+            1995 -  2026
+          </p>
+
+
+        </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>    
+    
+    
+    
+    
+   
+    
+    
+    <!--
+
+-->
+
+  <!-- Bootstrap JS (Collapse, Dropdown, etc.): required alongside qld.bootstrap.min.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/@qld-gov-au/qgds-bootstrap5@2.1.20/dist/assets/js/qld.bootstrap.min.js"></script>
+</body>
+
+</html>
