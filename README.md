@@ -1,3 +1,3 @@
-Enhance Page Templates
+<h1>Enhance Page Templates</h1>
 
-A collection of page templates part of the Enchance project setup to host pages for user testing purposes.
+<p>A collection of page templates part of the Enchance project setup to host pages for user testing purposes.</p>
