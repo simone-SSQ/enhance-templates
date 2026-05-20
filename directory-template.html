@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mediation level 1 training | Queensland Government</title>
+  <title>Support services for people leaving prison</title>
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@qld-gov-au/qgds-bootstrap5@2.1.20/dist/assets/css/qld.bootstrap.css">
   <style>
@@ -158,6 +158,71 @@
       margin-bottom: 12px;
     }
 
+    /* Default tags — QGDS tag-default variant (bordered chips; see qld.bootstrap.css .tag-list .tag-item) */
+
+    /* Informational tag chips — local override (grey fill, no border, tighter padding) */
+    .tag-list.tag-informational .tag-item {
+      background-color: rgb(245, 245, 245);
+      border: none;
+      padding: 0px 8px;
+    }
+
+    /* You may be interested in — in-content block (QGDS link-list) */
+    #main-content .interested-links {
+      margin-top: 48px;
+      padding-top: 48px;
+      border-top: 1px solid var(--qld-light-grey, #e5e5e5);
+    }
+
+    #main-content .interested-links .link-list {
+      margin-bottom: 0;
+    }
+
+    /* Queensland Corrective Services — section margin + heading rhythm */
+    #queensland-corrective-services {
+      margin-top: 48px;
+    }
+
+    #queensland-corrective-services h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #borallon-training-and-correctional-centre-btcc h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #community-re-entry-support-team-crest h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #registry-of-births-deaths-and-marriages h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #centrelink-services-australia h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #brisbane-common-ground h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #centacare-brisbane h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #mara-southeast-queensland-womens-re-entry-services h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #prisoners-legal-service h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #prison-ministry-of-the-uniting-church h2.mb-16 {
+      margin-top: 12px;
+    }
+
     /* Typography below lg — complements QGDS / Bootstrap scaling */
     @media (max-width: 991.98px) {
 
@@ -207,6 +272,11 @@
       .qld-side-navigation .nav-link {
         font-size: 0.875rem;
         line-height: 1.45;
+      }
+
+      .tag-list.tag-default .tag-item,
+      .tag-list.tag-informational .tag-item {
+        font-size: 0.8125rem;
       }
 
       .d-lg-none.mb-24>a.link-secondary {
@@ -320,6 +390,11 @@
 
       .d-lg-none.mb-24>a.link-secondary {
         font-size: 0.875rem;
+      }
+
+      .tag-list.tag-default .tag-item,
+      .tag-list.tag-informational .tag-item {
+        font-size: 0.75rem;
       }
 
       .qld-page-meta-band p,
@@ -558,16 +633,14 @@
     <nav class="d-none d-lg-block" aria-label="breadcrumb">
       <ol class="breadcrumb mb-24">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Your rights, crime and the law</a></li>
+        <li class="breadcrumb-item"><a href="#">Queensland’s government</a></li>
         <li class="breadcrumb-item"><a href="#">Legal,
             mediation and justice of the peace</a></li>
         <li class="breadcrumb-item"><a
-            href="#">Training
-            in dispute resolution</a></li>
+            href="#">Subject</a></li>
         <li class="breadcrumb-item"><a
-            href="#">Mediation
-            skills training</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Mediation level 1 training</li>
+            href="#">Prison and detention</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Support services for people leaving prison</li>
       </ol>
     </nav>
 
@@ -576,7 +649,7 @@
       <a class="link-secondary text-decoration-none d-inline-flex align-items-center gap-8"
         href="#">
         <span class="qld-icon qld-icon-sm qld-icon-chevron-left" aria-hidden="true"></span>
-        Mediation skills training
+        Prison and detention
       </a>
     </div>
 
@@ -585,215 +658,255 @@
       <div class="col-12 col-lg-8 ms-lg-0 px-0">
         <main id="main-content">
           <ul class="tag-list tag-default mb-24 justify-content-start ps-0">
-            <li class="tag-item">Training</li>
+            <li class="tag-item">Directory</li>
           </ul>
-          <h1 class="mb-24">Mediation level 1 training</h1>
-
-          <p class="lead mb-32 mb-lg-40">Learn how to facilitate a mediation process in our Mediation Level 1 training.</p>
+          <h1 class="mb-24">Support services for people leaving prison</h1>
+          <p>Part of the <a href="#">Prison and detention</a> topic</p>
+          <p class="lead mb-32 mb-lg-40">Find government and other support services for people transitioning from life
+            in prison and reintegrating into the community.</p>
           <hr aria-hidden="true">
 
           <nav class="qld-inpage-nav mb-40" aria-label="In page navigation">
             <h2 class="nav-title nav-link">On this page</h2>
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link px-0" href="#course-details">Course details</a>
+                <a class="nav-link px-0" href="#queensland-corrective-services">Queensland Corrective Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0" href="#who-can-enrol">Who can enrol</a>
+                <a class="nav-link px-0" href="#community-re-entry-support-team-crest">Community Re-entry Support Team
+                  (CREST)</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0" href="#how-to-enrol">How to enrol</a>
+                <a class="nav-link px-0" href="#borallon-training-and-correctional-centre-btcc">Borallon Training and
+                  Correctional Centre (BTCC)</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0" href="#what-you-will-learn">What you will learn</a>
+                <a class="nav-link px-0" href="#registry-of-births-deaths-and-marriages">Registry of Births, Deaths and
+                  Marriages</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0" href="#how-you-will-be-assessed">How you will be assessed</a>
+                <a class="nav-link px-0" href="#centrelink-services-australia">Centrelink (Services Australia)</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0" href="#awards-you-get">Awards you get</a>
+                <a class="nav-link px-0" href="#brisbane-common-ground">Brisbane Common Ground</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0" href="#contact">Contact</a>
+                <a class="nav-link px-0" href="#centacare-brisbane">Centacare Brisbane</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#mara-southeast-queensland-womens-re-entry-services">MARA – Southeast
+                  Queensland Women's Re-entry Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#prisoners-legal-service">Prisoners' Legal Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#prison-ministry-of-the-uniting-church">Prison Ministry of the Uniting
+                  Church</a>
               </li>
             </ul>
           </nav>
 
-          <div class="mb-40 p-24 rounded" style="background-color: rgba(230, 246, 255, 1);">
-            <h2 class="mb-16" id="in-short">In short</h2>
-            <p class="mb-24">Learn essential communication, tactical and cultural sensitivity skills to understand conflict resolution at a deeper level.
-              Equip yourself with powerful national standard-negotiation frameworks to deliver win-win outcomes for any client.</p>
-            <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
-              <span class="btn-icon qld-icon qld-icon-md qld-icon-external-link" aria-hidden="true"></span>
-              <span class="btn-label">Enrol now</span>
-            </a>
-          </div>
-
-          <section id="course-details" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">Course details</h2>
-            <div class="table-responsive qld-table">
-              <table class="table">
-                <colgroup>
-                  <col />
-                  <col />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th scope="colgroup" colspan="2" class="caption">
-                      Important course information
-                    </th>
-                  </tr>
-                </thead>
-      
-                <tbody>
-                  <tr>
-                    <th scope="row">Delivery</th>
-                    <td>
-                      <p>This course is delivered in a hybrid structure consisting of</p>
-                      <ul>
-                        <li>an online module—8 hours (equivalent to 1 day)</li>
-                        <li>
-                          in-person training sessions—38 hours (equivalent to 5 days)
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Start dates</th>
-                    <td>
-                      <p>8-12 June 2026</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Location</th>
-                    <td>
-                      <p>In-person training sessions are held at:<br />
-                        <a
-                          href="#"
-                          >South Queensland Dispute Resolution Centre</a><br />
-                        Level 26, 400 George Street,<br />
-                        Brisbane<br />
-                        Qld 4000
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Cost</th>
-                    <td>
-                      <p>$2,589.00</p>
-                      <p>
-                        $1,906.00 concession
-                      </p>
-                      <p>$494.90 for optional assessment</p>
-                      <p>See <a href="#">concession eligibility</a></p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section id="who-can-enrol" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">Who can enrol</h2>
-            <div class="mb-40 p-16" style="background-color: rgba(242, 250, 244, 1);">
-                <div class="d-flex align-items-start">
-                  <div class="w-100">
-                  <div class="flex-grow-1 min-w-0 w-100 d-flex justify-content-start align-items-start gap-2">
-                    <span class="qld-icon qld-icon-md qld-icon-alert-success text-success flex-shrink-0 d-flex flex-wrap" aria-hidden="true"></span>
-                    <p>You can enrol in Mediation level 1 training if:</p>
-                  </div>
-                    <ul class="mb-0 ps-48">
-                      <li>you have a general interest in conflict resolution.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-          </section>
-
-          <section id="how-to-enrol" class="mt-40 mt-lg-48">
-            <h2 class="mb-24">How to enrol</h2>
-
-            <h3 class="h5 mb-8">Step 1: Complete the application form</h3>
-            <h4 class="h5 mb-8">Online</h4>
-            <p class="mb-24">Complete the form.</p>
-            <p class="mb-32 mb-lg-40">
-              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
-                <span class="btn-icon qld-icon qld-icon-md qld-icon-external-link" aria-hidden="true"></span>
-                <span class="btn-label">Enrol now</span>
-              </a>
-            </p>
-
-            <h3 class="h5 mb-8">Step 2: Pay the fee</h3>
-            <p class="mb-16">Payment via credit card is required to secure your place.
-              <p>See <a href="#">payment options</a> or <a href="#">concession eligibility.</a></p>
-              <p>See <a href="#">terms and conditions.</a></p>
-          </section>
-
-          <section id="what-you-will-learn" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">What you will learn</h2>
-            <p class="mb-16">The course covers professional knowledge, skills and ethical principles that accredited mediators are expected to use.</p>
-            <h3 class="h5 mb-8">Topics</h3>
+          <section id="queensland-corrective-services">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Queensland Government</li>
+            </ul>
+            <h2 class="mb-16">Queensland Corrective Services</h2>
+            <p class="mb-16">Provides reintegration and support programs for people leaving prison.</p>
+            <h3 class="h5 mb-8">Services include</h3>
             <ul class="mb-24 ps-24">
-              <li>Principles/philosophy of mediation</li>
-              <li>Understanding conflict</li>
-              <li>Facilitative model of mediation</li>
-              <li>Intake process</li> 
-              <li>Communication skills</li>
-              <li>Negotiation frameworks</li>
-              <li>Cultural considerations, inclusivity accessibility, and diversity</li>
-              <li>Managing difficult behaviours and responses</li>
-              <li>Trauma-informed practice and bias</li>
-              <li>Importance of continuing professional development</li>
-              <li>Negotiation skills</li>
+              <li>Offending behaviour programs</li>
+              <li>Vocational education and training programs</li>
+              <li>Prison industries</li>
+              <li>Pastoral care</li>
+              <li>Cultural support programs</li>
+              <li>Transitional support</li>
+            </ul>
+            <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>Queensland Corrective Services
+                website<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+            <p class="mb-0"><span class="qld-icon qld-icon-sm qld-icon-phone me-2" aria-hidden="true"></span>Phone: <a href="#" target="_blank" rel="noopener noreferrer"><a href="tel:137468">13 74 68</a></span></p>
+          </section>
+          <hr aria-hidden="true">
+
+          <section id="community-re-entry-support-team-crest" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Queensland Government</li>
+            </ul>
+            <h2 class="mb-16">Community Re-entry Support Team (CREST)</h2>
+            <p class="mb-16">Provides community support services to people transitioning from prison and reintegrating.
+            </p>
+            <h3 class="h5 mb-8">Services include</h3>
+            <ul class="mb-24 ps-24">
+              <li>Short-term transitional support, including referrals for housing, medical treatment, and other
+                support.</li>
+              <li>Human case management support, including meeting with people and a network of support to support
+                transition back into the community.</li>
+              <li>Holistic support services, including assistance for people entering or staying in the community as
+                requested by community corrections officers.</li>
+            </ul>
+            <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>Community Re-entry Support Team
+              website<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+          </section>
+          <hr aria-hidden="true">
+
+          <section id="borallon-training-and-correctional-centre-btcc" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Queensland Government</li>
+            </ul>
+            <h2 class="mb-16">Borallon Training and Correctional Centre (BTCC)</h2>
+            <p class="mb-16">Provides support services to help people in training and correctional programs transition
+              back into the community.</p>
+            <h3 class="h5 mb-8">Services include</h3>
+            <ul class="mb-24 ps-24">
+              <li>Training to help people develop skills and address needs they may have for their reintegration.</li>
+              <li>Vocational training and development to provide pathways to employment opportunities.</li>
+            </ul>
+                <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>Borallon Training and Correctional
+                  Centre website<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>   
+          </section>
+          <hr aria-hidden="true">
+
+          <section id="registry-of-births-deaths-and-marriages" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Queensland Government</li>
+            </ul>
+            <h2 class="mb-16">Registry of Births, Deaths and Marriages</h2>
+            <p class="mb-24">Provides services to help people obtain identity documents and certificates required for
+              employment, housing, and government services.</p>
+              <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>Registry of Births, Deaths and
+                Marriages website<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+            <p class="mb-8"><span class="qld-icon qld-icon-sm qld-icon-phone me-2" aria-hidden="true"></span>Phone: <a href="tel:137468">13 74 68</a></p>
+            <p class="mb-0"><span class="qld-icon qld-icon-sm qld-icon-email me-2" aria-hidden="true"></span>Email: <a
+                href="mailto:bdm-mail@justice.qld.gov.au">bdm-mail@justice.qld.gov.au</a></p>
+          </section>
+          <hr aria-hidden="true">
+
+          <section id="centrelink-services-australia" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Australian Government</li>
+            </ul>
+            <h2 class="mb-16">Centrelink (Services Australia)</h2>
+            <p class="mb-16">Provides financial assistance and support for people leaving prison.</p>
+            <h3 class="h5 mb-8">Services include</h3>
+            <ul class="mb-24 ps-24">
+              <li>Crisis payment</li>
+              <li>Other payments depending on eligibility</li>
+            </ul>
+            <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>Centrelink website<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+            <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>Find a Centrelink service centre near
+                you<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+            <p class="mb-0"><span class="qld-icon qld-icon-sm qld-icon-phone me-2" aria-hidden="true"></span>Phone: <a href="tel:132468">13 24 68</a></p>
+          </section>
+          <hr aria-hidden="true">
+
+          <section id="brisbane-common-ground" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Not-for-profit organisation</li>
+            </ul>
+            <h2 class="mb-16">Brisbane Common Ground</h2>
+            <p class="mb-16">Offers housing for people who have experienced homelessness and those at risk of
+              homelessness.</p>
+            <h3 class="h5 mb-8">Services include</h3>
+            <ul class="mb-24 ps-24">
+              <li>Well-managed housing support for reintegration into the community.</li>
+            </ul>
+            <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>Brisbane Common Ground website<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+            <p class="mb-8"><span class="qld-icon qld-icon-sm qld-icon-phone me-2" aria-hidden="true"></span>Phone: <a href="tel:0733704700">07 3370 4700</a></p>
+            <p class="mb-0"><span class="qld-icon qld-icon-sm qld-icon-email me-2" aria-hidden="true"></span>Email: <a href="mailto:info@common-ground.org.au">info@common-ground.org.au</a></p>
+          </section>
+          <hr aria-hidden="true">
+
+          <section id="centacare-brisbane" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Not-for-profit organisation</li>
+            </ul>
+            <h2 class="mb-16">Centacare Brisbane</h2>
+            <p class="mb-16">Provides support for people who have been in prison.</p>
+            <h3 class="h5 mb-8">Services include</h3>
+            <ul class="mb-24 ps-24">
+              <li>Case management and referrals to support services including transitional housing, medical assistance,
+                and other support.</li>
+            </ul>
+            <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>Centacare Brisbane website<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+            <p class="mb-8"><span class="qld-icon qld-icon-sm qld-icon-phone me-2" aria-hidden="true"></span>Phone: <a href="tel:0733243100">07 3324 3100</a></p>
+            <p class="mb-0"><span class="qld-icon qld-icon-sm qld-icon-email me-2" aria-hidden="true"></span>Email: <a
+                href="mailto:centacare@bne.catholic.net.au">centacare@bne.catholic.net.au</a></p>
+          </section>
+          <hr aria-hidden="true">
+
+          <section id="mara-southeast-queensland-womens-re-entry-services" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Not-for-profit organisation</li>
+            </ul>
+            <h2 class="mb-16">MARA – Southeast Queensland Women's Re-entry Services</h2>
+            <p class="mb-16">Gender-specific support for women exiting correctional centres in Queensland. Support starts
+              in prison and continues for up to 12 months post-release.</p>
+            <h3 class="h5 mb-8">Services include</h3>
+            <ul class="mb-24 ps-24">
+              <li>Referral to services specific to women, including domestic violence and health services.</li>
+              <li>Holistic case management identifying individual needs such as health, mental health, drug and alcohol
+                support, education, training, housing, and family support.</li>
+            </ul>
+            <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>MARA – Southeast Queensland Women's
+                Re-entry Services website<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+          </section>
+          <hr aria-hidden="true">
+
+          <section id="prisoners-legal-service" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Not-for-profit organisation</li>
+            </ul>
+            <h2 class="mb-16">Prisoners' Legal Service</h2>
+            <p class="mb-16">Provides free legal advice and assistance to prisoners in Queensland.</p>
+            <h3 class="h5 mb-8">Services include</h3>
+            <ul class="mb-24 ps-24">
+              <li>Legal matters related to incarceration.</li>
+              <li>Post-release challenges.</li>
+            </ul>
+            <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>Prisoners' Legal Service website<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+          </section>
+          <hr aria-hidden="true">
+
+          <section id="prison-ministry-of-the-uniting-church" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Not-for-profit organisation</li>
+            </ul>
+            <h2 class="mb-16">Prison Ministry of the Uniting Church</h2>
+            <p class="mb-24">Supports people in correctional centres through pastoral care and community support, helping
+              navigate the transition to the community.</p>
+              <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>Prison Ministry of the Uniting Church
+                website<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+          </section>
+
+          <section class="interested-links" aria-labelledby="you-may-be-interested-heading">
+            <h2 class="h3 mb-16" id="you-may-be-interested-heading">You may be interested in</h2>
+            <ul class="link-list">
+              <li class="link-item">
+                <a class="link" href="#" target="_blank" rel="noopener noreferrer">
+                  Link
+                  <span class="qld-icon qld-icon-md qld-icon-external-link trailing" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li class="link-item">
+                <a class="link" href="#" target="_blank" rel="noopener noreferrer">
+                  Link
+                  <span class="qld-icon qld-icon-md qld-icon-external-link trailing" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li class="link-item">
+                <a class="link" href="#" target="_blank" rel="noopener noreferrer">
+                  Link
+                  <span class="qld-icon qld-icon-md qld-icon-external-link trailing" aria-hidden="true"></span>
+                </a>
+              </li>
             </ul>
           </section>
-
-          <section id="how-you-will-be-assessed" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">How you will be assessed</h2>
-            <p class="mb-16">Closed-book written exam person (1 hour)</p>
-            <p>The assessment is optional and only required if you want become a nationally accredited mediator.</p>
-          </section>
-
-          <section id="awards-you-get" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">Awards you get</h2>
-            <p class="mb-16">Certificate of training award.</p>
-            <p>Nationally recognised by the <a href="#">Australian mediator and dispute resolution accreditation standards</a> (AMDRAS).</p>
-          </section>
-
-          <section id="contact" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">Contact</h2>
-            <p class="mb-0">Contact the Dispute Resolution Branch on <a
-                href="tel:(07) 3738 7015">(07) 3738 7015</a> or email <a
-                href="#">mediation.training@justice.qld.gov.au</a> </p>
-          </section>
-
-         <section id="from-help-centre" class="mt-40 mt-lg-48"></section>
-          <div class="help-centre-band mb-40 p-24 rounded" style="background-color: rgba(230, 246, 255, 1);">
-            <h3 class="mb-16" id="from-help-centre">From the help centre</h3>
-            <p class="mb-24">Find answers to frequently asked questions about services, including:</p>
-            <section class="link-column mb-24" aria-label="Help centre">
-              <ul class="nav col-1">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Mediation and dispute resolution FAQs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Training fees, concessions and payments</a>
-                </li>
-                <li class="nav-item all-link">
-                  <a class="qld-cta-link view-all" href="#" target="_blank" rel="noopener noreferrer">
-                    Find more in the Help centre
-                    <span class="icon" aria-hidden="true"></span>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </div>
 
         </main>
       </div>
 
       <!-- Sidebar -->
-      <div class="col-12 col-lg-3 ps-0 pe-0 order-3 order-lg-0 mt-40 mt-lg-0 ms-lg-auto">
+      <div class="col-12 col-lg-3 ps-0 pe-0 order-3 order-lg-0 mt-0 mt-lg-0 ms-lg-auto">
         <nav class="qld-side-navigation" aria-label="Side Navigation">
 <button class="accordion-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sideNavCollapse" aria-expanded="false" aria-controls="sideNavCollapse">
 In this section
@@ -801,21 +914,21 @@ In this section
 <div class="nav-wrapper collapse d-lg-block" id="sideNavCollapse">
 
 <h2 class="nav-title">
-<a class="nav-link" href="#">Mediation skills training</a>
+<a class="nav-link" href="#">Prison and detention</a>
 </h2>
 
 <ul class="nav" aria-label="section navigation">
 <li class="nav-item active">
-<a href="#" class="nav-link">Mediation level 1 training</a>
+<a href="#" class="nav-link">Support services for people leaving prison</a>
 </li>
 <li class="nav-item">
-<a href="#" class="nav-link">Mediation level 2 training</a>
+<a href="#" class="nav-link">Service name</a>
 </li>
 <li class="nav-item">
-<a href="#" class="nav-link">Mediation mentoring sessions</a>
+<a href="#" class="nav-link">Tool name</a>
 </li>
 <li class="nav-item">
-<a href="#" class="nav-link">Register for dispute resolution training</a>
+<a href="#" class="nav-link">Help centre</a>
 </li>
 </ul>
 </div>
@@ -828,7 +941,7 @@ In this section
     <div class="row mx-0">
       <div class="col-12 qld-page-meta-band mt-16 mt-lg-0 pt-32 mb-40 mb-lg-0 px-0">
         <p class="mb-8"><span class="fw-semibold">This page is managed by:</span>
-          <a href="#">Dispute Resolution Branch</a>
+          <a href="#">Registry of Births, Deaths and Marriages</a>
         </p>
         <dl class="qld-content-dates my-0">
           <dt class="my-0">Last updated:</dt>
