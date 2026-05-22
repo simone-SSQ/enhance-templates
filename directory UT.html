@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Introduction to Conflict Coaching  | Queensland Government</title>
+  <title>Crime prevention directory</title>
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@qld-gov-au/qgds-bootstrap5@2.1.20/dist/assets/css/qld.bootstrap.css">
   <style>
@@ -148,6 +148,71 @@
       margin-bottom: 12px;
     }
 
+    /* Default tags — QGDS tag-default variant (bordered chips; see qld.bootstrap.css .tag-list .tag-item) */
+
+    /* Informational tag chips — local override (grey fill, no border, tighter padding) */
+    .tag-list.tag-informational .tag-item {
+      background-color: rgb(245, 245, 245);
+      border: none;
+      padding: 0px 8px;
+    }
+
+    /* You may be interested in — in-content block (QGDS link-list) */
+    #main-content .interested-links {
+      margin-top: 48px;
+      padding-top: 48px;
+      border-top: 1px solid var(--qld-light-grey, #e5e5e5);
+    }
+
+    #main-content .interested-links .link-list {
+      margin-bottom: 0;
+    }
+
+    /* Queensland Corrective Services — section margin + heading rhythm */
+    #queensland-corrective-services {
+      margin-top: 48px;
+    }
+
+    #queensland-corrective-services h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #borallon-training-and-correctional-centre-btcc h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #community-re-entry-support-team-crest h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #registry-of-births-deaths-and-marriages h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #centrelink-services-australia h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #brisbane-common-ground h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #centacare-brisbane h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #mara-southeast-queensland-womens-re-entry-services h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #prisoners-legal-service h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #prison-ministry-of-the-uniting-church h2.mb-16 {
+      margin-top: 12px;
+    }
+
     /* Abstract (lead) — QGDS typography: 1.25rem mobile, 1.5rem from 992px */
     #main-content .lead {
       font-weight: 400;
@@ -167,66 +232,6 @@
 
     .help-centre-band .link-column li.nav-item {
       border-bottom-color: rgba(190, 223, 255, 1);
-    }
-
-    a.qld-cta-link {
-      font-size: 14px;
-      line-height: 16px;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-
-    @media (max-width: 575.98px) {
-      a.qld-cta-link .icon {
-        width: 20px;
-        height: 20px;
-      }
-
-      a.qld-cta-link .icon::after {
-        width: 20px;
-        height: 20px;
-        -webkit-mask-size: 20px;
-        mask-size: 20px;
-      }
-    }
-
-    @media (min-width: 576px) {
-      a.qld-cta-link {
-        font-size: 20px;
-        line-height: 32px;
-      }
-    }
-
-    /* Course details — icon + text list (replaces table on training pages) */
-    .qld-course-info-heading {
-      color: rgba(0, 0, 83, 1);
-    }
-
-    .qld-course-info-icon {
-      color: rgba(48, 126, 219, 1);
-    }
-
-    h3.h5.qld-course-info-heading {
-      margin-top: 0;
-      margin-block-start: 0;
-    }
-
-    .qld-course-info-item > .d-flex {
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .qld-course-info-item + .qld-course-info-item {
-      margin-top: 24px;
-    }
-
-    .qld-course-info-content {
-      padding-left: 32px;
-    }
-
-    .qld-course-info-content p:last-child,
-    .qld-course-info-content ul:last-child {
-      margin-bottom: 0;
     }
 
   </style>
@@ -414,12 +419,11 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb mb-24">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Your rights, crime and the law</a></li>
-        <li class="breadcrumb-item"><a href="#">Legal,
-            mediation and justice of the peace</a></li>
-        <li class="breadcrumb-item"><a href="#">Training in dispute resolution</a></li>
-        <li class="breadcrumb-item"><a href="#">Mediation skills training</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Introduction to Conflict Coaching</li>
+        <li class="breadcrumb-item"><a href="#">Queensland's government</a></li>
+        <li class="breadcrumb-item"><a href="#">Legal, mediation and justice of the peace</a></li>
+        <li class="breadcrumb-item"><a href="#">Subject</a></li>
+        <li class="breadcrumb-item"><a href="#">Prison and detention</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Crime prevention directory</li>
       </ol>
     </nav>
 
@@ -428,188 +432,72 @@
       <div class="col-12 col-lg-8 ms-lg-0 px-0">
         <main id="main-content">
           <ul class="tag-list tag-default mb-24 justify-content-start ps-0">
-            <li class="tag-item">Training</li>
+            <li class="tag-item">Directory</li>
           </ul>
-          <h1 class="mb-24">Introduction to Conflict Coaching</h1>
-          <p>Part of the <a href="#">Conflict Resolution Training</a> topic</p>
-          <p class="lead mb-32 mb-lg-40">This course helps you develop practical skills to manage and resolve conflicts effectively, prevent future conflicts, and build your dispute resolution practice.</p>
+          <h1 class="mb-24">Crime prevention directory</h1>
+          <p>Part of the <a href="#">Crime</a> topic</p>
+          <p class="lead mb-32 mb-lg-40">Find crime prevention services in Queensland. </p>
           <hr aria-hidden="true">
 
           <nav class="qld-inpage-nav mb-40" aria-label="In page navigation">
             <h2 class="nav-title nav-link">On this page</h2>
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link px-0" href="#course-details">Course details</a>
+                <a class="nav-link px-0" href="#queensland-corrective-services">Crime Stoppers</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0" href="#who-can-enrol">Who can enrol</a>
+                <a class="nav-link px-0" href="#community-re-entry-support-team-crest">Neighbourhood Watch</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0" href="#how-to-enrol">How to enrol</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="#what-you-will-learn">What you will learn</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="#how-you-will-be-assessed">How you will be assessed</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="#awards-you-get">Awards you get</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="#contact">Contact</a>
+                <a class="nav-link px-0" href="#borallon-training-and-correctional-centre-btcc">PoliceLink</a>
               </li>
             </ul>
           </nav>
 
-          <div class="mb-40 p-24 rounded" style="background-color: rgba(230, 246, 255, 1);">
-            <h2 class="mb-16" id="in-short">In short</h2>
-            <p class="mb-24">Introduction to Conflict Coaching is a 2-day course designed to help you support individuals and managers in managing or resolving conflict. You'll learn practical strategies to address conflict, improve communication skills, and prevent future issues.</p>
-            <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
-              <span class="btn-icon qld-icon qld-icon-md qld-icon-external-link" aria-hidden="true"></span>
-              <span class="btn-label">Enrol now</span>
-            </a>
-          </div>
-
-          <section id="course-details" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">Course details</h2>
-            <div class="qld-course-info">
-              <p class="mb-24">Important information about Introduction to Conflict Coaching</p>
-
-              <div class="qld-course-info-item">
-                <div class="d-flex align-items-center gap-8 mb-8">
-                  <span class="qld-icon qld-icon-md qld-icon-profile qld-course-info-icon flex-shrink-0" aria-hidden="true"></span>
-                  <h3 class="h5 mb-0 qld-course-info-heading">Delivery</h3>
-                </div>
-                <div class="qld-course-info-content">
-                  <p class="mb-0">In person over 2 days.</p>
-                </div>
-              </div>
-
-              <div class="qld-course-info-item">
-                <div class="d-flex align-items-center gap-8 mb-8">
-                  <span class="qld-icon qld-icon-md qld-icon-calendar qld-course-info-icon flex-shrink-0" aria-hidden="true"></span>
-                  <h3 class="h5 mb-0 qld-course-info-heading">Start dates</h3>
-                </div>
-                <div class="qld-course-info-content">
-                <p>Currently, no upcoming dates are scheduled.</p>
-                </div>
-              </div>
-
-              <div class="qld-course-info-item">
-                <div class="d-flex align-items-center gap-8 mb-8">
-                  <span class="qld-icon qld-icon-md qld-icon-location qld-course-info-icon flex-shrink-0" aria-hidden="true"></span>
-                  <h3 class="h5 mb-0 qld-course-info-heading">Location</h3>
-                </div>
-                <div class="qld-course-info-content">
-                  <p>In-person training sessions are held at:<br />
-                    <a href="#">South Queensland Dispute Resolution Centre</a><br />
-                    Level 26, 400 George Street,<br />
-                    Brisbane<br />
-                    Qld 4000
-                  </p>
-                </div>
-              </div>
-
-              <div class="qld-course-info-item">
-                <div class="d-flex align-items-center gap-8 mb-8">
-                  <span class="qld-icon qld-icon-md qld-icon-cost-money qld-course-info-icon flex-shrink-0" aria-hidden="true"></span>
-                  <h3 class="h5 mb-0 qld-course-info-heading">Cost</h3>
-                </div>
-                <div class="qld-course-info-content">
-                  <p class="mb-0">$980.90</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="who-can-enrol" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">Who can enrol</h2>
-            <div class="mb-40 p-16" style="background-color: rgba(242, 250, 244, 1);">
-                <div class="d-flex align-items-start">
-                  <div class="w-100">
-                  <div class="flex-grow-1 min-w-0 w-100 d-flex justify-content-start align-items-start gap-2">
-                    <span class="qld-icon qld-icon-md qld-icon-alert-success text-success flex-shrink-0 d-flex flex-wrap" aria-hidden="true"></span>
-                    <p>You can enrol in Introduction to Conflict Coaching if:</p>
-                  </div>
-                    <ul class="mb-0 ps-48">
-                      <li>you want to develop skills to help others manage or resolve conflict</li>
-                      <li>you're interested in improving your dispute resolution practice.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-          </section>
-
-          <section id="how-to-enrol" class="mt-40 mt-lg-48">
-            <h2 class="mb-24">How to enrol</h2>
-
-            <h3 class="mb-8">Step 1: Complete the application form</h3>
-            <p class="mb-24">Fill out the application form with your details.</p>
-            <p class="mb-32 mb-lg-40">
-              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
-                <span class="btn-icon qld-icon qld-icon-md qld-icon-external-link" aria-hidden="true"></span>
-                <span class="btn-label">Enrol now</span>
-              </a>
-            </p>
-
-            <h3 class="mb-8">Step 2: Submit your application</h3>
-            <h3 class="mb-8">Step 3: Pay the fee </h3>
-            <p class="mb-24">We'll send you a payment link after receiving your application. The course fee is $980.90.</p>
-            <h3 class="mb-8">Step 4: Receive your enrolment confirmation</h3>
-            <p class="mb-24">Once your payment is processed, we will send you a confirmation email with further details about the course.</p>
-          </section>
-
-          <section id="what-you-will-learn" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">What you will learn</h2>
-            <p class="mb-16">This course covers the following topics:</p>
-            <ul class="mb-24 ps-24">
-              <li>philosophy of conflict coaching</li>
-              <li>effective process for conflict coaching</li>
-              <li>key skills in conflict coaching.</li>
+          <section id="queensland-corrective-services">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Community organisation</li>
             </ul>
-          </section>
+            <h2 class="mb-16">Crime Stoppers </h2>
+            <p class="mb-16">Crime Stoppers is a community program that helps the Queensland Police to solve crimes. This service can be used to report non-urgent crimes, criminal or suspicious activity. 
 
-          <section id="how-you-will-be-assessed" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">How you will be assessed</h2>
-            <p class="mb-16">There are no formal assessments for this course.</p>
+              Calls are not recorded, and you do not have to give your name. If you do want to give your name, it will be kept confidential. </p>
+            <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>www.crimestoppersqld.com.au/make-a-report/<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
+            <p class="mb-0"><span class="qld-icon qld-icon-sm qld-icon-phone me-2" aria-hidden="true"></span>Phone: <a href="#" target="_blank" rel="noopener noreferrer"><a href="tel:137468">1800 333 000 (24/7)</a></span></p>
           </section>
+          <hr aria-hidden="true">
 
-          <section id="contact" class="mt-40 mt-lg-48">
-            <h2 class="mb-16">Contact</h2>
-            <p class="mb-0">Contact the Dispute Resolution Branch on <a
-                href="tel:(07) 3738 7015">(07) 3738 7015</a> or email <a
-                href="#">mediation.training@justice.qld.gov.au</a> </p>
-          </section>
+          <section id="community-re-entry-support-team-crest" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Community organisation</li>
+            </ul>
+            <h2 class="mb-16">Neighbourhood Watch</h2>
+            <p class="mb-16">Neighbourhood Watch Queensland is a key crime prevention program run by the Queensland Police Service. 
 
-          <section id="from-help-centre" class="mt-40 mt-lg-48">
-          <div class="help-centre-band mb-40 p-24 rounded" style="background-color: rgba(230, 246, 255, 1);">
-            <h3 class="mb-16">From the help centre</h3>
-            <p class="mb-24">Find answers to frequently asked questions about services, including:</p>
-            <section class="link-column mb-24" aria-label="Help centre">
-              <ul class="nav col-1">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Mediation and dispute resolution FAQs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Training fees, concessions and payments</a>
-                </li>
-                <li class="nav-item all-link">
-                  <a class="qld-cta-link view-all" href="#" target="_blank" rel="noopener noreferrer">
-                    Find more in the Help centre
-                    <span class="icon" aria-hidden="true"></span>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </div>
+              It encourages communities to join together in small informal groups to collaboratively improve the safety of their families, neighbours as well as visitors to their neighbourhood. 
+            </p>
+            <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>www.nhwq.org/
+              <span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>
           </section>
+          <hr aria-hidden="true">
+
+          <section id="borallon-training-and-correctional-centre-btcc" class="mt-40 mt-lg-48">
+            <ul class="tag-list tag-informational justify-content-start ps-0" style="margin-bottom: 12px">
+              <li class="tag-item">Queensland Government</li>
+            </ul>
+            <h2 class="mb-16">PoliceLink </h2>
+            <p class="mb-16">PoliceLink is a Queensland Police service to report non-urgent crime and suspicious activity. </p>
+            <h3 class="mb-8">Services include</h3>
+                <p class="mb-8"><a href="#" target="_blank" rel="noopener noreferrer"><span class="qld-icon qld-icon-sm qld-icon-arrow-right me-2" aria-hidden="true"></span>https://www.police.qld.gov.au/policelink-reporting<span class="qld-icon qld-icon-sm qld-icon-external-link ms-2" aria-hidden="true"></span></a></p>   
+                <p class="mb-8"><span class="qld-icon qld-icon-sm qld-icon-phone me-2" aria-hidden="true"></span>Phone: <a href="tel:137468">131 444</a></p>
+              </section>
+          <hr aria-hidden="true">
 
         </main>
       </div>
 
       <!-- Sidebar -->
-      <div class="col-12 col-lg-3 ps-0 pe-0 order-3 order-lg-0 mt-40 mt-lg-0 ms-lg-auto">
+      <div class="col-12 col-lg-3 ps-0 pe-0 order-3 order-lg-0 mt-0 mt-lg-0 ms-lg-auto">
         <nav class="qld-side-navigation" aria-label="Side Navigation">
 <button class="accordion-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sideNavCollapse" aria-expanded="false" aria-controls="sideNavCollapse">
 In this section
@@ -617,21 +505,21 @@ In this section
 <div class="nav-wrapper collapse d-lg-block" id="sideNavCollapse">
 
 <h2 class="nav-title">
-<a class="nav-link" href="#">Mediation skills training</a>
+<a class="nav-link" href="#">Prison and detention</a>
 </h2>
 
 <ul class="nav" aria-label="section navigation">
 <li class="nav-item active">
-<a href="#" class="nav-link">Mediation level 1 training</a>
+<a href="#" class="nav-link">Support services for people leaving prison</a>
 </li>
 <li class="nav-item">
-<a href="#" class="nav-link">Mediation level 2 training</a>
+<a href="#" class="nav-link">Service name</a>
 </li>
 <li class="nav-item">
-<a href="#" class="nav-link">Mediation mentoring sessions</a>
+<a href="#" class="nav-link">Tool name</a>
 </li>
 <li class="nav-item">
-<a href="#" class="nav-link">Register for dispute resolution training</a>
+<a href="#" class="nav-link">Help centre</a>
 </li>
 </ul>
 </div>
@@ -644,7 +532,7 @@ In this section
     <div class="row mx-0">
       <div class="col-12 qld-page-meta-band mt-16 mt-lg-0 pt-32 mb-40 mb-lg-0 px-0">
         <p class="mb-8"><span class="fw-semibold">This page is managed by:</span>
-          <a href="#">Dispute Resolution Branch</a>
+          <a href="#">Department of Justice</a>
         </p>
         <dl class="qld-content-dates my-0">
           <dt class="my-0">Last updated:</dt>
