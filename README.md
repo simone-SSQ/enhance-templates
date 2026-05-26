@@ -9,7 +9,7 @@
 <p><a href="https://simone-ssq.github.io/enhance-templates/training.html">Training template</a></p>
 
 
-<p><a href="https://simone-ssq.github.io/enhance-templates/event.html">Event template</a></p>
+<p><a href="https://simone-ssq.github.io/enhance-templates/Event.html">Event template</a></p>
 
 
 <img class="promo-panel-image" src="Image_standard ratios.png" alt="Promotional image" />
