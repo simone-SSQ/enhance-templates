@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register for a Community Cabinet meeting</title>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@qld-gov-au/qgds-bootstrap5@2.1.20/dist/assets/css/qld.bootstrap.css">
+  <style>
+    :root {
+      --qld-coa-logo-svg: url("https://cdn.jsdelivr.net/npm/@qld-gov-au/qgds-bootstrap5@2.1.20/dist/assets/img/coa-delivering-for-qld.svg");
+    }
+
+    /* Website feedback column: full width below lg; fixed width on lg+ */
+    @media (max-width: 991.98px) {
+      .qld-footer .optional-column-2.border-column {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .qld-footer #btn-footer-feedback {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .qld-footer .optional-column-2 {
+        flex: 0 0 336px;
+        width: 336px;
+        max-width: 336px;
+      }
+    }
+
+    /* Breadcrumbs — full trail on lg+ (override QGDS nowrap / ellipsis) */
+    ol.breadcrumb {
+      width: 100%;
+    }
+
+    @media (min-width: 992px) {
+      .breadcrumb {
+        flex-wrap: wrap;
+        max-width: none;
+      }
+
+      .breadcrumb .breadcrumb-item,
+      .breadcrumb .breadcrumb-item.active {
+        overflow: visible;
+        text-overflow: unset;
+        white-space: normal;
+        flex-shrink: 0;
+      }
+
+      .breadcrumb .breadcrumb-item a {
+        overflow: visible;
+        text-overflow: unset;
+        white-space: normal;
+      }
+    }
+
+    /* Padding-start outside standard QGDS scale (aligned with preview) */
+    .ps-48 {
+      padding-left: 48px !important;
+    }
+
+    /* Official QGDS CoA + wordmark asset (same 2.1.20 bundle as qld.bootstrap.css).
+       Main row (desktop): exact brand blue R0 G94 B184 via mask.
+       Pre-header: monochrome img inverts to white below lg. */
+    .qld-coa-logo-img {
+      display: block;
+      width: auto;
+    }
+
+    .qld-coa-logo-img--pre {
+      height: 40px;
+    }
+
+    .qld-coa-logo-img--main {
+      width: 331px;
+      max-width: 100%;
+      height: 56px;
+      flex-shrink: 0;
+      -webkit-mask-image: var(--qld-coa-logo-svg);
+      mask-image: var(--qld-coa-logo-svg);
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: left center;
+      mask-position: left center;
+    }
+
+    @media (min-width: 992px) {
+      .qld-coa-logo-img--main {
+        background-color: rgb(0, 94, 184);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .qld-coa-logo-img--main {
+        background-color: #131212;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .qld-header-pre-header.dark .qld-coa-logo-img--pre {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    #main-content {
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 992px) {
+      #main-content {
+        max-width: 800px;
+      }
+    }
+
+    /* Content band vertical rhythm closer to Squiz/QGDS law templates */
+    #main-content hr {
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+
+    /* Override QGDS tool-page h1 top spacing (default ~64px) */
+    #main-content h1.mb-24 {
+      margin-top: 24px;
+    }
+
+    #main-content #who-can-enrol p.fw-bold {
+      color: rgba(0, 0, 83, 1);
+    }
+
+    /* Enrol CTAs — full-width on narrow viewports (~phone) */
+    @media (max-width: 699.98px) {
+      #main-content h2#in-short + p + a.btn.btn-primary,
+      #how-to-enrol p.mb-32.mb-lg-40 > a.btn.btn-primary {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+      }
+    }
+
+    #main-content .qld-inpage-nav .nav-title {
+      margin-bottom: 12px;
+    }
+
+    /* Enrol button — external link icon sizing and colour on primary buttons */
+    #main-content .btn .btn-icon.qld-icon-external-link {
+      width: 24px;
+      height: 24px;
+      --icon-size: 24px;
+      background-color: #fff;
+      color: #fff;
+    }
+
+    /* Default tags — QGDS tag-default variant (bordered chips; see qld.bootstrap.css .tag-list .tag-item) */
+
+    /* Informational tag chips — local override (grey fill, no border, tighter padding) */
+    .tag-list.tag-informational .tag-item {
+      background-color: rgb(245, 245, 245);
+      border: none;
+      padding: 0px 8px;
+    }
+
+    /* You may be interested in — in-content block (QGDS link-list) */
+    #main-content .interested-links {
+      margin-top: 48px;
+      padding-top: 48px;
+      border-top: 1px solid var(--qld-light-grey, #e5e5e5);
+    }
+
+    #main-content .interested-links .link-list {
+      margin-bottom: 0;
+    }
+
+    /* Queensland Corrective Services — section margin + heading rhythm */
+    #queensland-corrective-services {
+      margin-top: 48px;
+    }
+
+    #queensland-corrective-services h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #borallon-training-and-correctional-centre-btcc h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #community-re-entry-support-team-crest h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #registry-of-births-deaths-and-marriages h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #centrelink-services-australia h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #brisbane-common-ground h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #centacare-brisbane h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #mara-southeast-queensland-womens-re-entry-services h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #prisoners-legal-service h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    #prison-ministry-of-the-uniting-church h2.mb-16 {
+      margin-top: 12px;
+    }
+
+    /* Abstract (lead) — QGDS typography: 1.25rem mobile, 1.5rem from 992px */
+    #main-content .lead {
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    @media (min-width: 992px) {
+      #main-content .lead {
+        font-size: 1.5rem;
+        line-height: 1.33;
+      }
+    }
+
+    .help-centre-band .link-column {
+      background-color: transparent;
+    }
+
+    .help-centre-band .link-column li.nav-item {
+      border-bottom-color: rgba(190, 223, 255, 1);
+    }
+
+  </style>
+</head>
+
+<body>
+  <a class="visually-hidden-focusable position-absolute top-0 start-0 m-16 z-3" href="#main-content">Skip to main
+    content</a>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER — qld.gov.au/transport/licensing
+       Pre-header (dark strip)  +  main brand row
+       ═══════════════════════════════════════════ -->
+  <header class="qld-header" role="banner">
+
+    <!-- Pre-header: dark utility strip -->
+    <div class="qld-header-pre-header dark">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+
+          <!-- Left: "qld.gov.au" text (desktop) / CoA logo (mobile) -->
+          <a class="qld-header-link align-self-center" href="#"
+            aria-label="Queensland Government">
+            <!-- Text only on desktop – QGDS CSS hides logo at lg+ via .qld-header-logo rule -->
+            <span class="d-none d-lg-inline">qld.gov.au</span>
+            <!-- Logo only on mobile – hidden at lg+ by both QGDS CSS and Bootstrap d-lg-none -->
+            <img src="https://cdn.jsdelivr.net/npm/@qld-gov-au/qgds-bootstrap5@2.1.20/dist/assets/img/coa-delivering-for-qld.svg"
+              alt="" width="331" height="56"
+              class="qld-header-logo is-delivering-for-qld qld-coa-logo-img qld-coa-logo-img--pre"
+              aria-hidden="true">
+          </a>
+
+          <!-- Centre/Right: utility links – desktop only -->
+          <div class="d-none d-lg-flex align-items-baseline">
+            <a class="qld-header-link ms-16" href="#">Find services</a>
+            <a class="qld-header-link ms-16" href="#">Business Queensland</a>
+            <a class="qld-header-link ms-16" href="#">Government employees</a>
+            <a class="qld-header-link ms-16" href="#">Contact us</a>
+          </div>
+
+          <!-- Mobile-only: Search + Menu icon buttons
+               QGDS CSS hides these at lg+ with display:none -->
+          <div class="qld-header-mobile-controls">
+            <button id="qld-header-toggle-search-button" type="button"
+              class="qld-header-mobile-button is-search-toggle is-closed"
+              aria-controls="qld-header-search" aria-expanded="false"
+              aria-label="Open search">Search</button>
+            <button id="burgerBtn" type="button"
+              class="qld-header-mobile-button is-menu-toggle"
+              data-bs-toggle="collapse" data-bs-target="#main-nav"
+              aria-controls="main-nav" aria-expanded="false"
+              aria-label="Open menu">Menu</button>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /pre-header -->
+
+    <!-- Main header: CoA logo (desktop) + Search bar -->
+    <div class="qld-header-main default">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Brand / logo column
+               QGDS CSS:
+               • .qld-header-brand-image  → display:none by default, display:block at lg+
+               • .qld-header-brand:not(:has(.qld-header-secondary-content)) → hidden on mobile
+               So on mobile the main header area is visually minimal (just the bottom border)
+               and the CoA logo in the pre-header carries the brand. -->
+          <div class="col">
+            <div class="qld-header-brand">
+              <a class="qld-header-link d-lg-inline-flex align-middle" href="#"
+                aria-label="Delivering for Queensland — Queensland Government">
+                <div class="qld-header-brand-image align-self-center">
+                  <span class="qld-header-logo is-delivering-for-qld qld-coa-logo-img qld-coa-logo-img--main"
+                    role="img" aria-hidden="true"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Search column
+               QGDS CSS: is-closed hides on mobile; at lg+ display:block always overrides is-closed -->
+          <div class="col-lg-4">
+            <div id="qld-header-search" class="qld-header-site-search is-closed">
+              <form class="site-search" role="search" action="#" method="get">
+                <div class="qld-search-input">
+                  <input id="site-search-query" name="query" class="form-control" type="search"
+                    autocomplete="off" aria-label="Search" placeholder="Search">
+                  <button class="btn btn-primary" type="submit" aria-label="Search">
+                    <span class="btn-icon" aria-hidden="true"></span>
+                    <span class="btn-label">Search</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /qld-header-main -->
+
+  </header>
+
+  <!-- ═══════════════════════════════════
+       PRIMARY NAVIGATION (QGDS Navbar)
+       Desktop: horizontal bar
+       Mobile: full-screen slide-out
+       ═══════════════════════════════════ -->
+  <nav id="main-nav" class="navbar navbar-expand-lg" aria-label="Website navigation" role="navigation">
+    <div id="navbarNav" class="container">
+
+      <!-- Mobile nav header (title + close button) -->
+      <div class="nav-header">
+        <span class="navbar-brand">Menu</span>
+        <button id="burgerCloseBtn" type="button" class="navbar-btn"
+          data-bs-toggle="collapse" data-bs-target="#main-nav"
+          aria-controls="main-nav" aria-expanded="false" aria-label="Close">Close</button>
+      </div>
+
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+
+          <!-- Home (icon only on desktop, labelled on mobile) -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span class="qld-icon qld-icon-md qld-icon-home" aria-hidden="true"></span>
+              <span class="visually-hidden-lg">Home</span>
+            </a>
+          </li>
+
+          <!-- WoG mega menu -->
+          <li class="nav-item dropdown" data-is-expanded-on-mobile="true">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+            <button class="nav-link dropdown-toggle" type="button"
+              data-bs-toggle="dropdown" data-bs-auto-close="false"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="visually-hidden">Expand</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Aboriginal and Torres Strait Islander peoples</a></li>
+              <li><a class="dropdown-item" href="#">Community support</a></li>
+              <li><a class="dropdown-item" href="#">Education</a></li>
+              <li><a class="dropdown-item" href="#">Emergency services and safety</a></li>
+              <li><a class="dropdown-item" href="#">Environment, land and water</a></li>
+              <li><a class="dropdown-item" href="#">Family, relationships, births and deaths</a></li>
+              <li><a class="dropdown-item" href="#">Health</a></li>
+              <li><a class="dropdown-item" href="#">Housing</a></li>
+              <li><a class="dropdown-item" href="#">Jobs and work</a></li>
+              <li><a class="dropdown-item" href="#">People with disability</a></li>
+              <li><a class="dropdown-item" href="#">Queensland's government</a></li>
+              <li><a class="dropdown-item" href="#">Recreation, sport and arts</a></li>
+              <li><a class="dropdown-item" href="#">Transport</a></li>
+              <li><a class="dropdown-item" href="#">Your rights, crime and the law</a></li>
+              <li><a class="dropdown-item" href="#">Youth</a></li>
+            </ul>
+          </li>
+
+          <!-- Utility links visible only on mobile
+               (shown in pre-header on desktop) -->
+          <li class="nav-item mobile-only">
+            <a class="nav-link" href="#">Find services</a>
+          </li>
+          <li class="nav-item mobile-only">
+            <a class="nav-link" href="#">Business Queensland</a>
+          </li>
+          <li class="nav-item mobile-only">
+            <a class="nav-link" href="#">Government employees</a>
+          </li>
+          <li class="nav-item mobile-only">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+    <div id="overlay"></div>
+  </nav>
+
+  <div class="container mt-40 mt-lg-32 pb-40 pb-lg-48">
+
+    <!-- Breadcrumbs — full trail on lg+; parent link with back chevron below lg (QGDS Breadcrumbs) -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-24">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Queensland's government</a></li>
+        <li class="breadcrumb-item"><a href="#">Premier's Community Cabinet</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Register for a Community Cabinet meeting</li>
+      </ol>
+    </nav>
+
+    <div class="row gx-16 gx-lg-32 gy-32 gy-lg-0 align-items-lg-start mx-0">
+      <!-- Main column -->
+      <div class="col-12 col-lg-8 ms-lg-0 px-0">
+        <main id="main-content">
+          <ul class="tag-list tag-default mb-24 justify-content-start ps-0">
+            <li class="tag-item">Event</li>
+          </ul>
+          <h1 class="mb-24">Register for a Community Cabinet meeting</h1>
+          <p>Part of the <a href="#">Premier's Community Cabinet</a> topic</p>
+          <p class="lead mb-32 mb-lg-40">Meet with Premier David Crisafulli and Cabinet ministers in your region to have your say.</p>
+          <hr aria-hidden="true">
+
+          <nav class="qld-inpage-nav mb-40" aria-label="In page navigation">
+            <h2 class="nav-title nav-link">On this page</h2>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#whats-involved">What's involved</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#what-to-bring">What to bring</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#who-can-attend">Who can attend</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#cost">Cost</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0" href="#subscribe">Subscribe to upcoming events</a>
+              </li>
+            </ul>
+          </nav>
+
+          <section class="qld-promo-panel contained mb-40 mb-lg-48">
+            <div class="row alt content-left">
+              <div class="image-panel">
+                <img class="promo-panel-image" src="https://github.com/simone-SSQ/enhance-templates/raw/main/Image_standard%20ratios.png" alt="Promotional image" />
+              </div>
+              <div class="content-panel alt">
+                <div class="main">
+                  <h2>South Burnett Community Cabinet</h2>
+
+                  <p><span class="fw-semibold">Date:</span> Sunday 7 June, 2026</br>
+                  <span class="fw-semibold">Time:</span> 2pm</br>
+                  <span class="fw-semibold">Location:</span> Kingaroy, South Burnett region</p>
+                </div>
+                <div class="btn-container">
+                  <a class="btn btn-primary" href="#" rel="noopener noreferrer">
+                    <span class="btn-icon qld-icon qld-icon-md qld-icon-external-link" aria-hidden="true"></span>
+                    <span class="btn-label">Register</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="whats-involved" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">What's involved</h2>
+            <p class="mb-16">A Community Cabinet meeting gives you an opportunity to ask questions, raise issues, share ideas and meet with Queensland Government representative.</p>
+            <h3 class="mb-16">Meeting agenda</h3>
+            <ul class="mb-24 ps-24">
+              <li>15-minute meeting with a Cabinet minister</li>
+              <li>networking afternoon tea with the Premier, ministers and government representatives.</li>
+            </ul>
+            <p class="mb-16">You can choose to attend either the 15-minute meeting or afternoon tea, or both. You will also be able to nominate the minister you wish to meet.
+The Premier may not always be able to attend a Community Cabinet meeting. You will still have an opportunity to speak with a minister or government representative.</p>
+          </section>
+
+          <section id="what-to-bring" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">What to bring</h2>
+            <ul class="mb-24 ps-24">
+              <li>Proof of ticket or registration</li>
+              <li>Photo ID</li>
+              <li>Key speaking points and any relevant documents or background information the minister can takeaway.</li>
+            </ul>
+          </section>
+
+          <section id="who-can-attend" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">Who can attend</h2>
+            <div class="mb-40 p-16" style="background-color: rgba(242, 250, 244, 1);">
+                <div class="d-flex align-items-start">
+                  <div class="w-100">
+                  <div class="flex-grow-1 min-w-0 w-100 d-flex justify-content-start align-items-start gap-2">
+                    <span class="qld-icon qld-icon-md qld-icon-alert-success text-success flex-shrink-0 d-flex flex-wrap" aria-hidden="true"></span>
+                    <p>You can attend the Community Cabinet meeting if you are:</p>
+                  </div>
+                    <ul class="mb-0 ps-48">
+                      <li>Individuals</li>
+                      <li>Groups of up to 3 people</li>
+                      <li>Deputations</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          <section id="cost" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">Cost</h2>
+            <p class="mb-16">Free.</p>
+          </section>
+
+          <section id="contact" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">Contact</h2>
+            <p class="mb-16">Contact the Department of Premier and Cabinet by emailing <a href="#">communitycabinet@premiers.qld.gov.au</a>.</p>
+          </section>
+
+          <section id="subscribe" class="mt-40 mt-lg-48">
+            <h2 class="mb-16">Subscribe to upcoming events</h2>
+            <p class="mb-16"><a href="#">Subscribe</a> to get notified about upcoming events in your region.</p>
+          </section>
+
+          <section class="interested-links" aria-labelledby="you-may-be-interested-heading">
+            <h2 class="h3 mb-16" id="you-may-be-interested-heading">You may be interested in</h2>
+            <ul class="link-list">
+              <li class="link-item">
+                <a class="link" href="#" rel="noopener noreferrer">Community Cabinet Sunshine Coast</a>
+              </li>
+              <li class="link-item">
+                <a class="link" href="#" rel="noopener noreferrer">Community Cabinet Cairns</a>
+              </li>              
+              <li class="link-item">
+                <a class="link" href="#" rel="noopener noreferrer">Community Cabinet Townsville</a>
+              </li>
+            </ul>
+          </section>
+
+        </main>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-12 col-lg-3 ps-0 pe-0 order-3 order-lg-0 mt-0 mt-lg-0 ms-lg-auto">
+        <nav class="qld-side-navigation" aria-label="Side Navigation">
+<button class="accordion-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sideNavCollapse" aria-expanded="false" aria-controls="sideNavCollapse">
+In this section
+</button>
+<div class="nav-wrapper collapse d-lg-block" id="sideNavCollapse">
+
+<h2 class="nav-title">
+<a class="nav-link" href="#">Premier's Community Cabinet</a>
+</h2>
+
+<ul class="nav" aria-label="section navigation">
+<li class="nav-item active">
+<a href="#" class="nav-link">Register for a Community Cabinet meeting</a>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link">Service name</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+
+    </div>
+
+    <!-- Page meta -->
+    <div class="row mx-0">
+      <div class="col-12 qld-page-meta-band mt-16 mt-lg-0 pt-32 mb-40 mb-lg-0 px-0">
+        <p class="mb-8"><span class="fw-semibold">This page is managed by:</span>
+          <a href="#">Department of Premier and Cabinet</a>
+        </p>
+        <dl class="qld-content-dates my-0">
+          <dt class="my-0">Last updated:</dt>
+          <dd class="my-0">12 December 2025</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+<!-- QGDS Footer Component -->
+
+<footer class="qld-footer dark" role="contentinfo">
+  <!-- Footer content container -->
+  <div class="container">
+    <div class="row">
+      <div class="col title">
+        <h2 class="footer-site-name">Queensland Government</h2>
+      </div>
+    </div>
+    <div class="row">
+      
+      <!-- Contact us Column -->
+      <div class="col-12 col-lg-3 py-24 py-lg-0 footer-contact ">
+
+        <!-- Inner Grid to manage layout of contact us content -->
+        <div class="row ">
+
+          <div class="col col-lg-12">
+
+            <h3 class="footer-heading">
+            Contact us
+            </h3>
+
+            <div>
+            <p>Get in touch for enquiries, feedback, complaints and compliments.</p>
+            </div>
+              
+          </div><!-- Inner grid col-12  -->
+
+          <div class="col col-lg-12 contact-btn order-lg-last d-flex d-lg-block mt-lg-32 ">
+            <a href="#" class="btn btn-outline-secondary">
+              Contact us
+            </a>
+          </div><!-- Inner grid col-12  -->  
+        
+       
+          <div class="col-12">
+              <div class="footer-contact-item footer-contact-0">
+                <span class="qld-icon qld-icon-phone" aria-hidden="true"></span> <span><strong>Phone: </strong><a href="tel:137468" class="d-inline" data-analytics-link-group="qg-contact-phone">13 QGOV (13 74 68)</a></span>
+              </div>
+              <div class="footer-contact-item footer-contact-1">
+                <span class="qld-icon qld-icon-facebook" aria-hidden="true"></span> <a href="#">/QueenslandGovernment</a>
+              </div>
+              <div class="footer-contact-item footer-contact-2">
+                <span class="qld-icon qld-icon-x" aria-hidden="true"></span> <a href="#">@QldGov</a>
+              </div>
+
+          </div>
+        </div>
+
+      </div><!-- Contact us Column -->
+
+
+
+
+      <!-- WoG links -->
+      <div class="col-12 col-lg-2 border-column"
+        aria-label="footer-navigation">
+        
+        <div class="footer-column pe-lg-16">
+
+
+        
+          <ul class="nav footer-link-list flex-column pt-lg-2">
+            <li><a class="nav-link" href="#" >Help</a></li>
+            <li><a class="nav-link" href="#" >Copyright</a></li>
+            <li><a class="nav-link" href="#" >Disclaimer</a></li>
+            <li><a class="nav-link" href="#" >Privacy</a></li>
+            <li><a class="nav-link" href="#" >Right to information</a></li>
+            <li><a class="nav-link" href="#" >Accessibility</a></li>
+            <li><a class="nav-link" href="#" >Jobs in Queensland Government</a></li>
+            <li><a class="nav-link" href="#" >Other languages</a></li>
+          </ul>
+
+        
+        </div>
+      </div>
+
+
+      <!-- Optional Column 2 — feedbackForm partial needs a .row around col-* (see QGDS feedbackForm.hbs) -->
+      <div class="col-12 col-lg-2 optional-column-2 border-column" aria-label="Website feedback">
+        <div class="footer-column pe-lg-16">
+          <h3 class="footer-heading">Website feedback</h3>
+          <div class="footer-content">
+            <div class="row">
+              <div class="col-12">
+                <p>Help us improve the content on our website or tell us what is working well.</p>
+              </div>
+              <div class="col-12">
+                <div id="qg-feedback-toggle" class="qg-footer-feedback-wrap">
+                  <a id="btn-footer-feedback" class="btn btn-global-secondary qg-feedback-toggle collapsed"
+                    data-bs-toggle="collapse" href="#qg-footer-feedback" role="button" aria-expanded="false"
+                    aria-controls="qg-footer-feedback" data-analytics-link-group="qg-feedback">Leave your feedback</a>
+                  <div id="qg-footer-feedback" class="qg-footer-feedback__v2 collapse">
+                    <div id="feedbackFormIO" data-formio data-formio-project-name="oldkihhcwbdtwye"
+                      data-formio-form-name="footerfeedbackcontactus"
+                      data-formio-env-url="api.forms.platforms.qld.gov.au"
+                      data-formio-createForm-options="formioCreateFormOptions"
+                      data-formio-createForm-controller="formioCreateFormController">
+                      <div class="qg-spinner" role="status">
+                        <div class="spinner-border"></div>
+                        <div class="qg-spinner-label">Loading...</div>
+                      </div>
+                    </div>
+                    <div class="qg-footer-feedback-footer">
+                      <a class="qg-footer-feedback__close" data-bs-toggle="collapse" href="#qg-footer-feedback"
+                        role="button" aria-label="Close Feedback Form" aria-expanded="true"
+                        aria-controls="qg-footer-feedback">Close</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Acknowledgement of Country -->
+      <div class="col crest">
+
+        <div class="footer-column">
+
+        <div class="footer-content">
+          <div class="footer-acknowledgements">
+            
+              <h3 class="footer-heading">Cultural acknowledgement</h3>
+              
+              <p>We pay our respects to the Aboriginal and Torres Strait Islander ancestors of this land, their spirits and their legacy. The foundations laid by these ancestors—our First Nations peoples—give strength, inspiration and courage to current and future generations towards creating a better Queensland.</p>
+              
+            
+          </div>
+
+          
+          
+
+          <p class="copyright">
+            &copy; The State of Queensland
+            1995 -  2026
+          </p>
+
+
+        </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>    
+    
+    
+    
+    
+   
+    
+    
+    <!--
+
+-->
+
+  <!-- Bootstrap JS (Collapse, Dropdown, etc.): required alongside qld.bootstrap.min.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/@qld-gov-au/qgds-bootstrap5@2.1.20/dist/assets/js/qld.bootstrap.min.js"></script>
+</body>
+
+</html>
