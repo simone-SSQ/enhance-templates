@@ -134,6 +134,10 @@
       color: rgba(0, 0, 83, 1);
     }
 
+    #main-content h2#in-short {
+      color: rgba(0, 0, 83, 1);
+    }
+
     /* Enrol CTAs — full-width on narrow viewports (~phone) */
     @media (max-width: 699.98px) {
       #main-content h2#in-short + p + a.btn.btn-primary,
@@ -145,7 +149,18 @@
     }
 
     #main-content .qld-inpage-nav .nav-title {
+      font-weight: 600;
       margin-bottom: 12px;
+      color: rgba(0, 0, 83, 1);
+    }
+
+    /* Enrol button — external link icon sizing and colour on primary buttons */
+    #main-content .btn .btn-icon.qld-icon-external-link {
+      width: 24px;
+      height: 24px;
+      --icon-size: 24px;
+      background-color: #fff;
+      color: #fff;
     }
 
     /* Abstract (lead) — QGDS typography: 1.25rem mobile, 1.5rem from 992px */
@@ -211,9 +226,24 @@
       margin-block-start: 0;
     }
 
+    .qld-course-info-item {
+      padding-top: 16px;
+    }
+
     .qld-course-info-item > .d-flex {
-      gap: 8px;
+      gap: 12px;
       margin-bottom: 8px;
+      align-items: center;
+    }
+
+    .qld-course-info-item > .d-flex .qld-course-info-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qld-course-info-item > .d-flex h3 {
+      margin: 0;
     }
 
     .qld-course-info-item + .qld-course-info-item {
@@ -221,7 +251,7 @@
     }
 
     .qld-course-info-content {
-      padding-left: 32px;
+      padding-left: 36px;
     }
 
     .qld-course-info-content p:last-child,
@@ -471,32 +501,32 @@
               <p class="mb-24">Important information about Introduction to Conflict Coaching.</p>
 
               <div class="qld-course-info-item">
-                <div class="d-flex align-items-center gap-8 mb-8">
+                <div class="d-flex align-items-center gap-12 mb-8">
                   <span class="qld-icon qld-icon-md qld-icon-profile qld-course-info-icon flex-shrink-0" aria-hidden="true"></span>
-                  <h3 class="h5 mb-0 qld-course-info-heading">Delivery</h3>
+                  <h3>Delivery</h3>
                 </div>
                 <div class="qld-course-info-content">
-                  <p class="mb-0">In person over 2 days.</p>
+                  <p class="mb-0 pt-16">In person over 2 days.</p>
                 </div>
               </div>
 
               <div class="qld-course-info-item">
-                <div class="d-flex align-items-center gap-8 mb-8">
+                <div class="d-flex align-items-center gap-12 mb-8">
                   <span class="qld-icon qld-icon-md qld-icon-calendar qld-course-info-icon flex-shrink-0" aria-hidden="true"></span>
-                  <h3 class="h5 mb-0 qld-course-info-heading">Start dates</h3>
+                  <h3>Start dates</h3>
                 </div>
                 <div class="qld-course-info-content">
-                <p>Currently, no upcoming dates are scheduled.</p>
+                <p class="pt-16">Currently, no upcoming dates are scheduled.</p>
                 </div>
               </div>
 
               <div class="qld-course-info-item">
-                <div class="d-flex align-items-center gap-8 mb-8">
+                <div class="d-flex align-items-center gap-12 mb-8">
                   <span class="qld-icon qld-icon-md qld-icon-location qld-course-info-icon flex-shrink-0" aria-hidden="true"></span>
-                  <h3 class="h5 mb-0 qld-course-info-heading">Location</h3>
+                  <h3>Location</h3>
                 </div>
                 <div class="qld-course-info-content">
-                  <p>In-person training sessions are held at:<br />
+                  <p class="pt-16">In-person training sessions are held at:<br />
                     <a href="#">South Queensland Dispute Resolution Centre</a><br />
                     Level 26, 400 George Street,<br />
                     Brisbane<br />
@@ -506,12 +536,12 @@
               </div>
 
               <div class="qld-course-info-item">
-                <div class="d-flex align-items-center gap-8 mb-8">
+                <div class="d-flex align-items-center gap-12 mb-8">
                   <span class="qld-icon qld-icon-md qld-icon-cost-money qld-course-info-icon flex-shrink-0" aria-hidden="true"></span>
-                  <h3 class="h5 mb-0 qld-course-info-heading">Cost</h3>
+                  <h3>Cost</h3>
                 </div>
                 <div class="qld-course-info-content">
-                  <p class="mb-0">$980.90</p>
+                  <p class="mb-0 pt-16">$980.90</p>
                 </div>
               </div>
             </div>
